@@ -1,0 +1,29 @@
+<nav>
+  <ul>
+    <li>
+      <button routerLink="/dashboard/home" routerLinkActive="active">
+        Dashboard Home
+      </button>
+    </li>
+    <li>
+      <button routerLink="/dashboard/cards" routerLinkActive="active">
+        Dashboard Cards
+      </button>
+    </li>
+    <li>
+      <button routerLink="/dashboard/data" routerLinkActive="active">
+        Dashboard Data
+      </button>
+    </li>
+
+    <li class="right">
+      <button (click)="authService.logout()">
+        Logout
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

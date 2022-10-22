@@ -1,0 +1,23 @@
+<blockquote>
+  There is an input and reader component. <code>ReaderComponent</code> needs to
+  show the data live. When it changes, we need to show it immediately.
+</blockquote>
+
+<input
+  type="text"
+  placeholder="Type the data to see"
+  [(ngModel)]="data"
+  (ngModelChange)="editDataOnChange()" 
+/>
+<!-- 
+  ngModelChange can be binded to the method in the service so that the method can reflect the output
+  in the previous one it was binded to the method in the component.
+-->
+
+
+<!-- 
+    We can not send data as input parameter.
+    In fact, The reader component is here to represent kind of a web element which developed by another team and we can't use input parameters. 
+-->
+
+<app-reader></app-reader>

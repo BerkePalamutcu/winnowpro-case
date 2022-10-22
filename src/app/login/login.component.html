@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="logo">
+    <img src="/assets/logo.png" />
+  </div>
+
+  <input [(ngModel)]="userName" type="text" placeholder="Username" />
+  <input [(ngModel)]="password" type="password" placeholder="Password" />
+
+  <small> You can just click Login button to login.</small>
+
+  <button type="button" (click)="login(userName, password)">Login</button>
+</div>

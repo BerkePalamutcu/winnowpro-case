@@ -1,0 +1,27 @@
+$breakpoint-mobileMin: 320px;
+$breakpoint-mobileMax: 480px;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /*normally flex-wrap and display: flex makes it responsive
+	 however, we can also set up our own custom rules with media queries
+	 I would like to see the cards be aligned center in mobile version
+	 so I will refactor the code in that way. On tablets and higher pixels 
+	 it looks fine.
+	*/
+  justify-content: flex-start;
+  @media (min-width: $breakpoint-mobileMin) and (max-width: $breakpoint-mobileMax) {
+    justify-content: center;
+  }
+}
+
+.card {
+  display: flex;
+  background-color: purple;
+  width: 15rem;
+  height: 100px;
+  border-radius: 10px;
+}
