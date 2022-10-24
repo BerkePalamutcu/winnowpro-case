@@ -11,6 +11,10 @@ import { LoginService } from './login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  /*ChangeDetectionStrategy onpush added here so that the parent components 
+    when the user enters information on the inputs the parent components won't
+    be rerendered and it will be more performant.
+  */
 })
 export class LoginComponent{
   private authService = inject(AuthService);
